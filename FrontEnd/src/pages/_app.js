@@ -19,7 +19,7 @@ export default function App({ Component, pageProps }) {
       <PersistGate loading={null} persistor={persistor}>
         <ParallaxProvider>
           {path !== "/admin" && path !== "/admin/login" && <Header />}
-          <div className={path === "/admin" || path === "/admin/login" ? "" : "pt-[120px]"}>
+          <div className={path === "/admin" || path === "/admin/login" ? "" : "pt-[100px]"}>
 
             <Component {...pageProps} />
             <ToastContainer />
