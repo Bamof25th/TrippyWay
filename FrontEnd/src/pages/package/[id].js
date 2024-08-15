@@ -295,24 +295,24 @@ const Packages = ({packageData}) => {
 
   };
 
-  // const fetchPackage = async () => {
-  //   try {
-  //     const response = await fetch(
-  //       `${process.env.NEXT_PUBLIC_HOST}/api/packages/${id}`,
-  //       {
-  //         method: "GET",
-  //         headers: {
-  //           "Content-Type": "application/json",
-  //         },
-  //       }
-  //     );
-  //     const data = await response.json();
-  //     fetchHotels(data.package.hotels)
-  //     setPack(data.package);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
+  const fetchPackage = async () => {
+    try {
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_HOST}/api/packages/${id}`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      const data = await response.json();
+      fetchHotels(data.package.hotels)
+      setPack(data.package);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const updateUserProfile = async (pkgId) => {
     // setIsLoading(true)
@@ -939,18 +939,18 @@ const Packages = ({packageData}) => {
 export default Packages;
 
 export async function getStaticPaths() {
-  // const res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/packages/all`);
-  // const data = await res.json();
-  // console.log(data)
-  // // const paths = data.packs.map((pkg) => ({
-  // //   params: { id: pkg._id },
-  // // }));
+  const res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/packages/all`);
+  const data = await res.json();
+  console.log(data)
+  const paths = data.packs.map((pkg) => ({
+    params: { id: pkg._id },
+  }));
 
   // const paths = {
   //   id:"3338838388388388"
   // }
 
-  // return { paths, fallback: false };
+  return { paths, fallback: false };
 }
 
 export async function getStaticProps({ params }) {
