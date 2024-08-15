@@ -97,6 +97,8 @@ exports.getFilteredPackage = async (req, res, next) => {
         let { filters, searchQuery } = req.body
         const filterObject = {};
 
+        console.log("heloo")
+
 
         // Add filters based on the categories
         const selectedCategories = Object.entries(filters?.categories)
@@ -200,7 +202,7 @@ exports.getFilteredPackage = async (req, res, next) => {
         //         };
         //     }
         // }
-        // console.log(filterObject)
+        console.log(filterObject)
 
         
 
