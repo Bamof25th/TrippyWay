@@ -337,7 +337,7 @@ const Homepage = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mt-8">
             {Array.from({ length: 8 }, (_, i) => i).map((index) => (
-              <Card2 data={pack} index={index}/>
+              <Card2 data={pack} key={index}/>
             ))}
           </div>
         </div>
