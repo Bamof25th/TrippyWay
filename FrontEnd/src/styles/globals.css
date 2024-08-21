@@ -2,90 +2,95 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
 /* offers-slider in header */
+
+html,body {
+  font-family: "Nunito Sans", sans-serif;
+}
+
 .pipe-slider p {
-    animation: slide-text 30s linear infinite;
-    white-space: nowrap;
+  animation: slide-text 30s linear infinite;
+  white-space: nowrap;
 }
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
-    width: 25px !important;
-    height: 25px !important;
-    font-size: 15px !important;
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 50%;
-    /* padding: 5px; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgba(0, 0, 0, 0.8);
-    font-weight: 900;
-    transition: all .3s ease-in-out;
+  width: 25px !important;
+  height: 25px !important;
+  font-size: 15px !important;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  /* padding: 5px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 900;
+  transition: all 0.3s ease-in-out;
 }
 
 /* package slug */
 .vertical-strike-tailwind::before {
-    content: '';
-    position: absolute;
-    /* left: 50%; */
-    top: 50%;
-    bottom: 0;
-    width: 1px;
-    /* Adjust the thickness of the line here */
-    background-color: black;
-    /* Adjust the color of the line here */
-    transform: translateX(-50%);
-    z-index: 0;
+  content: "";
+  position: absolute;
+  /* left: 50%; */
+  top: 50%;
+  bottom: 0;
+  width: 1px;
+  /* Adjust the thickness of the line here */
+  background-color: black;
+  /* Adjust the color of the line here */
+  transform: translateX(-50%);
+  z-index: 0;
 }
 
 @keyframes slide-text {
-    0% {
-        transform: translateX(100%);
-    }
+  0% {
+    transform: translateX(100%);
+  }
 
-    100% {
-        transform: translateX(-100%);
-    }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 /*hero section of  page */
 .bg-glassy {
-    background-color: rgba(11, 82, 91, 0.3);
-    backdrop-filter: blur(5px) grayscale(0.5);
-    -webkit-backdrop-filter: blur(5px) grayscale(0.5);
-    /* For Safari */
-    /* border: 1px solid rgba(255, 255, 255, 0.25); */
+  background-color: rgba(11, 82, 91, 0.3);
+  backdrop-filter: blur(5px) grayscale(0.5);
+  -webkit-backdrop-filter: blur(5px) grayscale(0.5);
+  /* For Safari */
+  /* border: 1px solid rgba(255, 255, 255, 0.25); */
 }
 
-
-.slick-slide>div {
-    margin: 0 10px;
+.slick-slide > div {
+  margin: 0 10px;
 }
-
 
 /* css for package page calendar */
 .react-calendar__tile--available {
-    /* border: 1px solid blue; */
-    border-radius: 5px;
-    background-color: rgb(203, 233, 233);
+  /* border: 1px solid blue; */
+  border-radius: 5px;
+  background-color: rgb(203, 233, 233);
 
-    opacity: 1;
-    /* Full opacity for available dates */
+  opacity: 1;
+  /* Full opacity for available dates */
 }
 
 /* Style for unavailable dates */
 .react-calendar__tile--disabled {
-    opacity: 0.5;
-    /* Reduced opacity for unavailable dates */
-    pointer-events: none;
-    /* Disable pointer events for unavailable dates */
+  opacity: 0.5;
+  /* Reduced opacity for unavailable dates */
+  pointer-events: none;
+  /* Disable pointer events for unavailable dates */
 }
 
 .react-calendar__month-view__days button {
-    height: 40px;
-    font-size: 14px;
+  height: 40px;
+  font-size: 14px;
 }
-.react-calendar__navigation{
-    display: flex;
+.react-calendar__navigation {
+  display: flex;
 }

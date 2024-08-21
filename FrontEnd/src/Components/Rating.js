@@ -17,10 +17,10 @@ const Rating = ({ stars }) => {
       </span>
     );
   });
-  return <div className="flex flex-row m-2 gap-2">
+  return <div className="flex flex-row m-2 ">
     {ratingStar} 
     <div className="font-medium ">
-        {stars} {" Ratings"}
+        {stars} 
     </div>
   </div>
 }

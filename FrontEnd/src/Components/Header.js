@@ -47,11 +47,11 @@ const Header = () => {
             <header className="w-full fixed z-20 text-gray-100 shadow ">
 
                 {/* offers slider */}
-                <div className="w-full pipe-slider overflow-hidden flex items-center justify-center py-2 bg-white text-center z-10">
+                {/* <div className="w-full pipe-slider overflow-hidden flex items-center justify-center py-2 bg-white text-center z-10">
                 <p className="w-full text-red-600 text-center">
                         For a limited-time discount: &quot;50% off for the next 48 hours! Don&apos;t miss out!&quot;
                     </p>
-                </div>
+                </div> */}
                 <div className='bg-white text-black border-t-2 border '>
                     <div className="container mx-auto flex justify-between items-center   px-6 lg:px-12">
                         {/* Logo and Navigation */}
