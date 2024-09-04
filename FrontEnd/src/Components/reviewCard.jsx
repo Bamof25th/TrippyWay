@@ -1,34 +1,37 @@
-import React from 'react';
-import { IoMdStar } from "react-icons/io";
-import Rating from './Rating';
-import Image from 'next/image';
+import React from "react";
+import Rating from "./Rating";
+import commas from "../assets/comma.png";
+import Image from "next/image";
 // Individual review card
 const ReviewCard = ({ review }) => {
-  const rating=4;
   return (
-    <div className="flex flex-col bg-white rounded-lg shadow-lg p-10 items-center m-4">
-      <div className="flex items-center mb-4">
-        <Rating stars={rating}/>
-      </div>
-      <p className="text-gray-600 italic mb-4">&quot;{review.comment}&quot;</p>
-      <div className="flex justify-between items-center mt-4">
-        <div className="flex flex-col gap-4 justify-center items-center">
-          <div className="mr-2">
+    <div className="rounded-lg border bg-white text-black shadow-sm w-full max-w-md p-6 grid gap-6">
+      <div
+        className="border p-6 bg-card text-card-foreground rounded-lg shadow-md hover:shadow-lg transition-all"
+        data-v0-t="card"
+      >
+        <div className="flex items-center gap-4">
+          <span className="relative flex shrink-0 overflow-hidden rounded-full w-12 h-12 border">
             <img
-              className="w-10 h-10 rounded-full"
               src={review.avatar}
-              alt={review.name}
+              className="flex h-full w-full items-center justify-center rounded-full bg-muted"
             />
-          </div>
-          <div className="text-sm flex flex-col items-center gap-2 justify-center">
-            <p className="text-gray-900 leading-none">{review.name}</p>
-            <p className="text-gray-600">{review.date}</p>
+          </span>
+          <div>
+            <h4 className="font-semibold">{review.name}</h4>
+            <div className="flex items-center gap-1 text-sm text-muted-foreground">
+              <Rating stars={review.rating} />
+            </div>
           </div>
         </div>
+        {/* <h5 className="mt-4 font-medium text-green-500">{review.place.charAt(0).toUpperCase() + review.place.slice(1)}</h5> */}
+        <h5 className=" text-xs text-slate-500">{review.date}</h5>
+        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+          {review.comment}
+        </p>
       </div>
     </div>
   );
 };
-
 
 export default ReviewCard;

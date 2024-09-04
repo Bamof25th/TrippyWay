@@ -8,20 +8,19 @@ const Rating = ({ stars }) => {
   const ratingStar = Array.from({ length: 5 }, (_, index) => {
     let number = index + 0.5; // to show half star
     return (
+   
       <span key={index}>
         {stars >= index + 1
-          ? < FaStar className="text-yellow-500 text-xl"/>
+          ? < FaStar className="text-green-700 text-xl"/>
           : stars >= number
-          ? <FaStarHalfAlt  className="text-yellow-500 text-xl"/>
-          : <AiOutlineStar className="text-yellow-500 text-xl" />}
+          ? <FaStarHalfAlt  className="text-green-700 text-xl"/>
+          : <AiOutlineStar className="text-green-700 text-xl" />}
       </span>
+      
     );
   });
-  return <div className="flex flex-row m-2 ">
-    {ratingStar} 
-    <div className="font-medium ">
-        {stars} 
-    </div>
+  return <div className="flex ">
+    {ratingStar}
   </div>
 }
 

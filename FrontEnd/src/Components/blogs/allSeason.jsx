@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import BlogCard from '../ui/BlogCard';
 
 const allSeason = () => {
 
@@ -45,16 +46,7 @@ const allSeason = () => {
   return (
     <div className="container flex flex-wrap justify-center md:grid md:grid-cols-3 sm:grid-cols-1 gap-4 w-2/3 " >
       {allSeason.map((blog, index) => (
-        <Link key={blog.id} href={`/blog/${blog.id}`}>
-        <div key={index} className="blog-card " style={{ width: '100%', maxWidth: '300px', margin: '20px', padding: '20px', border: '1px solid #ddd', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)', textAlign: 'center', backgroundColor: '#fff' }}>
-          <img src={blog.cover_image} alt={blog.title} style={{ maxWidth: '100%', borderRadius: '8px' ,height:"250px"}} />
-          <h2 className='font-bold text-xl'>{blog.title}</h2>
-          <p style={{ display: '-webkit-box', WebkitLineClamp: 4, WebkitBoxOrient: 'vertical', overflow: 'hidden',textOverflow: 'ellipsis' }}>{blog.description}</p>
-
-          <p className='font-bold '>{blog.credit}</p>
-          
-        </div>
-        </Link>
+        <BlogCard post={blog} key={index} />
       ))}
     </div>
   )

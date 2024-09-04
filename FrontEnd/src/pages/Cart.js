@@ -156,6 +156,8 @@ const Cart = () => {
     // console.log(pkg)
   }, []);
 
+  console.log(pack)
+
   const handleIncrementTraveller = (id) => {
     // console.log(pack);
 
@@ -351,7 +353,6 @@ const Cart = () => {
                   {pkg.images.map((slide, index) => (
                     <SwiperSlide key={index}>
                       <div className="w-full h-full flex items-center justify-center bg-gray-200">
-                        {" "}
                         {/* Added bg-gray-200 as a placeholder background */}
                         <img
                           src={slide}
@@ -451,7 +452,7 @@ const Cart = () => {
             </div>
           ))}</>
           
-        }{pack.length===0 && <div><img src="../../emptycart.png" width={1000} height={1000}></img></div>} </div>
+        }{pack.length===0  && <div><img src="../../emptycart.png" width={1000} height={1000}></img></div>} </div>
         
         {/*price details */}
         <div className="w-2/6 mt-5 mb-5 p-4  bg-white border-2 rounded-xl shadow-md overflow-hidden">
